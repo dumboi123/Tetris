@@ -9,8 +9,13 @@ public class BlockControl : MonoBehaviour
     [SerializeField] private GameData _gameData;
     private float _previousTime = 0;
     private int _currentLevel = 0;
+    private static int _currentMusic = -1;
     private bool _gameOver = false;
-    void Start() => SetColor();
+    void Start()
+    {
+        SetColor();
+        SetBGMusic();
+    }
     void Update()
     {
         MoveLeftRight();
@@ -24,6 +29,14 @@ public class BlockControl : MonoBehaviour
         int color = Random.Range(0, _gameData.Levels[_currentLevel].Sprites.Length);
         foreach (Transform children in transform)
             children.GetComponent<SpriteRenderer>().sprite = _gameData.Levels[_currentLevel].Sprites[color];
+    }
+    private void SetBGMusic()
+    {
+        if (_currentLevel != _currentMusic)
+        {
+            _currentMusic = _currentLevel;
+            SoundController.Instance.PlayBackGround(_currentMusic);
+        }
     }
     private void MoveLeftRight()
     {
@@ -44,13 +57,14 @@ public class BlockControl : MonoBehaviour
         if (Time.time - _previousTime > (Input.GetKey(KeyCode.DownArrow) ? _gameData.FallTime / 10 : _gameData.FallTime))
         {
             transform.position += new Vector3(0, -1, 0);
+            SoundController.Instance.PlaySound("down", 0.4f);
             if (!CheckMovable())
             {
                 transform.position -= new Vector3(0, -1, 0);
                 AddToGrid();
                 CheckRows();
                 this.enabled = false;
-                if(!_gameOver)
+                if (!_gameOver)
                     FindObjectOfType<Spawner>().SpawnBlock();
             }
             _previousTime = Time.time;
@@ -127,6 +141,7 @@ public class BlockControl : MonoBehaviour
             Destroy(GameData.Grid[column, row].gameObject);
             GameData.Grid[column, row] = null;
         }
+        SoundController.Instance.PlaySound("clearRow", 0.4f);
     }
 
     private bool HasFullRow(int row)
@@ -144,6 +159,7 @@ public class BlockControl : MonoBehaviour
         {
             transform.RotateAround(transform.TransformPoint(_rotationPoint), new Vector3(0, 0, 1), 90);
             RotateChildren(90);
+            SoundController.Instance.PlaySound("up", 0.4f);
             if (!CheckMovable())
             {
                 transform.RotateAround(transform.TransformPoint(_rotationPoint), new Vector3(0, 0, 1), -90);

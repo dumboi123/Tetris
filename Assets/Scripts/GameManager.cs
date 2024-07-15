@@ -160,6 +160,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver() => StartCoroutine("EndGame");
     IEnumerator EndGame()
     {
+        SoundController.Instance.PlayBackGround(9);
         _darkScreenUI.SetActive(true);
         float elapsedTime = 0f, timeDuration = 0.5f, timeRestart = 20f;
         //GameOver 
@@ -194,7 +195,7 @@ public class GameManager : MonoBehaviour
         RestartGame(true);
     }
 
-    private void RestartGame(bool introStage= false) => StartCoroutine(LoadGame(introStage));
+    private void RestartGame(bool introStage = false) => StartCoroutine(LoadGame(introStage));
 
     IEnumerator LoadGame(bool backToIntro)
     {
