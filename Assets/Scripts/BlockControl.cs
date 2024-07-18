@@ -9,7 +9,7 @@ public class BlockControl : MonoBehaviour
     [SerializeField] private GameData _gameData;
     private float _previousTime = 0;
     private int _currentLevel = 0;
-    private static int _currentMusic = -1;
+    private static int _currentMusic = -1, _currentLevelByTens = 1;
     private bool _gameOver = false;
     void Start()
     {
@@ -26,6 +26,12 @@ public class BlockControl : MonoBehaviour
     private void SetColor()
     {
         _currentLevel = FindObjectOfType<GameManager>()._level / 10;
+        if (_currentLevel != _currentLevelByTens)
+        {
+            _currentLevelByTens = _currentLevel;
+            FindObjectOfType<GameManager>().UpdateNextByLevel(_gameData.Levels[_currentLevel].Shapes);
+            FindObjectOfType<GameManager>().UpdateImgStatistics(_gameData.Levels[_currentLevel].Shapes);
+        }
         int color = Random.Range(0, _gameData.Levels[_currentLevel].Sprites.Length);
         foreach (Transform children in transform)
             children.GetComponent<SpriteRenderer>().sprite = _gameData.Levels[_currentLevel].Sprites[color];

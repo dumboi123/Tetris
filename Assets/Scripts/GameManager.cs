@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,7 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _playAgainUI;
     [SerializeField] private List<TextMeshProUGUI> _textStatisticsUI;
 
-    [SerializeField] private List<Sprite> _spriteShapes;
+    [SerializeField] private Sprite[] _spriteShapes;
+    [SerializeField] private Image[] _imageStatisticsUI;
     private int _score, _bestScore, _amount;
 
     private int T, L, O, I, Z, rL, rZ;
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
             _level++;
             _textLevelUI.text = _level.ToString();
         }
+
     }
     public void UpdateStatistics(int number)
     {
@@ -85,28 +88,28 @@ public class GameManager : MonoBehaviour
                 _textStatisticsUI[0].text = T.ToString();
                 break;
             case 1:
-                L++;
-                _textStatisticsUI[1].text = L.ToString();
+                rL++;
+                _textStatisticsUI[1].text = rL.ToString();
                 break;
             case 2:
-                O++;
-                _textStatisticsUI[2].text = O.ToString();
+                Z++;
+                _textStatisticsUI[2].text = Z.ToString();
                 break;
             case 3:
-                I++;
-                _textStatisticsUI[3].text = I.ToString();
+                O++;
+                _textStatisticsUI[3].text = O.ToString();
                 break;
             case 4:
-                Z++;
-                _textStatisticsUI[4].text = Z.ToString();
+                rZ++;
+                _textStatisticsUI[4].text = rZ.ToString();
                 break;
             case 5:
-                rL++;
-                _textStatisticsUI[5].text = rL.ToString();
+                L++;
+                _textStatisticsUI[5].text = L.ToString();
                 break;
             case 6:
-                rZ++;
-                _textStatisticsUI[6].text = rZ.ToString();
+                I++;
+                _textStatisticsUI[6].text = I.ToString();
                 break;
             default:
                 return;
@@ -139,6 +142,17 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 return;
+        }
+    }
+    public void UpdateNextByLevel(Sprite[] currentLevel)
+    {
+        _spriteShapes = currentLevel;
+    }
+    public void UpdateImgStatistics(Sprite[] currentLevel)
+    {
+        for (int i = 0; i < _imageStatisticsUI.Count(); i++)
+        {
+            _imageStatisticsUI[i].sprite = currentLevel[i];
         }
     }
     public void NewGame()

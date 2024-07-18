@@ -911,9 +911,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_38
       rect:
         serializedVersion: 2
-        x: 244
+        x: 240
         y: 1408
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1563,9 +1563,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 276
-        y: 1292
+        y: 1286
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2318,9 +2318,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_105
       rect:
         serializedVersion: 2
-        x: 44
+        x: 40
         y: 1088
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2423,9 +2423,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_110
       rect:
         serializedVersion: 2
-        x: 244
+        x: 240
         y: 1088
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2970,9 +2970,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 972
+        y: 966
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3075,9 +3075,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 276
-        y: 972
+        y: 966
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3830,9 +3830,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_177
       rect:
         serializedVersion: 2
-        x: 44
+        x: 40
         y: 768
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3935,9 +3935,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_182
       rect:
         serializedVersion: 2
-        x: 244
+        x: 240
         y: 768
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -4482,9 +4482,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 652
+        y: 646
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4587,9 +4587,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 276
-        y: 652
+        y: 646
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5342,9 +5342,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_249
       rect:
         serializedVersion: 2
-        x: 44
+        x: 40
         y: 448
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -5447,9 +5447,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_254
       rect:
         serializedVersion: 2
-        x: 244
+        x: 240
         y: 448
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -5994,9 +5994,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 332
+        y: 326
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6099,9 +6099,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 276
-        y: 332
+        y: 326
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -6854,9 +6854,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_321
       rect:
         serializedVersion: 2
-        x: 44
+        x: 40
         y: 128
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -6959,9 +6959,9 @@ TextureImporter:
       name: NES - Tetris - Tetrominos_326
       rect:
         serializedVersion: 2
-        x: 244
+        x: 240
         y: 128
-        width: 16
+        width: 24
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -7506,9 +7506,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 12
+        y: 6
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7611,9 +7611,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 276
-        y: 12
+        y: 6
         width: 32
-        height: 8
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

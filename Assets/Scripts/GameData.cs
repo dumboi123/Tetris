@@ -15,4 +15,5 @@ public class GameData: ScriptableObject
 public struct Level
 {
     public Sprite[] Sprites ;
+    public Sprite[] Shapes;
 }
